@@ -22,27 +22,4 @@ test.describe("Product Catalogue Test Case", () => {
 
     expect(productCatalogue.length).toBeGreaterThan(0);
   });
-
-  test("User is able to see the sale product list", async ({
-    page,
-  }) => {
-    await page.getByPlaceholder("Sale").click();
-  });
-
-test("User is able to see the product catalog when searching with a specific keyword without logging in", async ({
-  page,
-}) => {
-  await page.getByPlaceholder("Search entire store here...").click();
-  await page.getByPlaceholder("Search entire store here...").fill("tshirt");
-  await page.getByRole("button", { name: "Search" }).click();
-
-  await expect(page.getByText("Related search terms Jacket,")).toBeVisible();
-  let productCatalogue = await page
-    .locator("//li[@class='item product product-item']")
-    .all();
-
-  console.log("Number of product listed:", productCatalogue.length);
-
-  expect(productCatalogue.length).toBeGreaterThan(0);
-});
 });

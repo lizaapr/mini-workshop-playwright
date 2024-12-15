@@ -1,4 +1,4 @@
-import { defineConfig, devices } from "@playwright/test";
+import test, { defineConfig, devices, expect } from "@playwright/test";
 
 /**
  * Read environment variables from file.
@@ -71,6 +71,7 @@ export default defineConfig({
     //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
     // },
   ],
+});
 
   /* Run your local dev server before starting the tests */
   // webServer: {
@@ -78,4 +79,3 @@ export default defineConfig({
   //   url: 'http://127.0.0.1:3000',
   //   reuseExistingServer: !process.env.CI,
   // },
-});

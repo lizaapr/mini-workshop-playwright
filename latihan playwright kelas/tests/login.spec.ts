@@ -74,4 +74,31 @@ test.describe("Create Account & Login Test Case", () => {
       - link "Change Password"
       `);
   });
+
+  // test("User is able to my orders", async ({ page }) => {
+  //   console.log("Email:", email);
+  //   console.log("Password:", password);
+
+  //   await page.goto("https://magento.softwaretestingboard.com/");
+  //   await page.getByRole("link", { name: "Sign In" }).click();
+
+  //   await page.getByLabel("Email", { exact: true }).fill(email);
+  //   await page.getByLabel("Password").fill(password);
+  //   await page.getByRole("button", { name: "Sign In" }).click();
+  //   await expect(
+  //     page.getByRole("banner").getByText(`Welcome, ${firstName} ${lastName}!`)
+  //   ).toBeVisible();
+  //   await page
+  //     .getByRole("banner")
+  //     .locator("button")
+  //     .filter({ hasText: "Change" })
+  //     .click();
+  //   await page.getByRole("link", { name: "My Orders" }).click();
+  //   await expect(page.locator("#maincontent")).toMatchAriaSnapshot(`
+  //     - strong: Contact Information
+  //     - paragraph: ${firstName} ${lastName} ${email}
+  //     - link "Edit"
+  //     - link "Change Password"
+  //     `);
+  // });
 });
